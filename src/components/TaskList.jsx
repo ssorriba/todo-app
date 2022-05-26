@@ -1,12 +1,20 @@
 import Task from "./Task";
 
-const TaskList = ({ tasks }) => {
+const TaskList = ({ tasks, setTasks }) => {
   return (
     <>
       {tasks && tasks.length ? (
         <div className="bg-valhalla mt-5 ml-5 mr-5 rounded-lg">
-          {tasks.map((taskDescription, index) => (
-            <Task task={taskDescription} index={index} />
+          {tasks.map((task, index) => (
+            <Task
+              key={task.id}
+              index={index}
+              tasks={tasks}
+              setTasks={setTasks}
+              task={task.task}
+              taskId={task.id}
+              completed={task.completed}
+            />
           ))}
         </div>
       ) : (

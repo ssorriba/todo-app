@@ -1,7 +1,8 @@
-import { useState } from "react";
-import Header from "./components/Header";
 import AddTask from "./components/AddTask";
+import Header from "./components/Header";
 import TaskList from "./components/TaskList";
+
+import { useState } from "react";
 
 function App() {
   const [tasks, setTasks] = useState([]);
@@ -11,7 +12,7 @@ function App() {
       <div className="container h-screen mx-auto mt-20 font-poppins">
         <Header />
         <AddTask tasks={tasks} setTasks={setTasks} />
-        <TaskList tasks={tasks} />
+        <TaskList tasks={tasks} setTasks={setTasks} />
       </div>
     </>
   );

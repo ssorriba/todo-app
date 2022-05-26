@@ -1,10 +1,16 @@
-import { useState } from "react";
-
 import Error from "./Error";
+
+import { useState } from "react";
 
 const AddTask = ({ tasks, setTasks }) => {
   const [task, setTask] = useState("");
   const [error, setError] = useState(false);
+
+  const generateId = () => {
+    const random = Math.random().toString(36).substring(2);
+    const fecha = Date.now().toString(36);
+    return fecha + random;
+  };
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -12,11 +18,16 @@ const AddTask = ({ tasks, setTasks }) => {
     if (task === "") {
       setError(true);
       return;
-    } else {
-      setTasks([...tasks, task]);
     }
 
     setError(false);
+
+    const taskObject = { task, completed: false };
+
+    taskObject.id = generateId();
+
+    setTasks([...tasks, taskObject]);
+
     setTask("");
   };
 
