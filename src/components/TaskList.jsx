@@ -13,7 +13,7 @@ const TaskList = ({ tasks, setTasks }) => {
     <>
       {tasks && tasks.length ? (
         <>
-          <div className="m-5 ml-12 mr-12 bg-dark-tangerine rounded-md md:flex justify-center md:max-w-[150px] md:ml-6 active:scale-90 hover:bg-dark-tangerine-hover">
+          <div className="text-center m-5 ml-12 mr-12 bg-dark-tangerine rounded-md md:flex md:justify-center md:max-w-[150px] md:ml-6 active:scale-90 hover:bg-dark-tangerine-hover">
             <button
               className="p-1 text-center font-medium"
               onClick={handleClear}
