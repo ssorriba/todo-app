@@ -41,8 +41,10 @@ const Task = ({ tasks, setTasks, task, taskId, index, completed }) => {
           <button
             type="button"
             className={`${
-              isComplete ? "bg-storm-grey text-white" : "bg-dark-tangerine"
-            } box-border col-start-1 col-end-2 rounded-md m-1 ml-5 mr-3 md:col-start-1 md:col-end-3 md:mr-5 md:ml-5 `}
+              isComplete
+                ? "bg-storm-grey text-white"
+                : "bg-dark-tangerine hover:bg-dark-tangerine-hover"
+            } active:scale-90 font-medium box-border col-start-1 col-end-2 rounded-md m-1 ml-5 mr-3 md:col-start-1 md:col-end-3 md:mr-5 md:ml-5 `}
             onClick={handleComplete}
             disabled={isComplete}
           >
@@ -50,7 +52,7 @@ const Task = ({ tasks, setTasks, task, taskId, index, completed }) => {
           </button>
           <button
             type="button"
-            className="text-white box-border col-start-2 col-end-3 bg-fire-engine-red rounded-md m-1 ml-3 mr-5 md:col-start-1 md:col-end-3 md:mr-5 md:ml-5"
+            className="font-medium hover:bg-fire-engine-red-hover active:scale-90 text-white box-border col-start-2 col-end-3 bg-fire-engine-red rounded-md m-1 ml-3 mr-5 md:col-start-1 md:col-end-3 md:mr-5 md:ml-5"
             onClick={handleDelete}
           >
             Delete

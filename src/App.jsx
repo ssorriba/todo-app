@@ -9,7 +9,7 @@ function App() {
 
   return (
     <>
-      <div className="container h-screen mx-auto mt-20 font-poppins">
+      <div className="container h-screen mx-auto mt-10 md:mt-20 font-poppins">
         <Header />
         <AddTask tasks={tasks} setTasks={setTasks} />
         <TaskList tasks={tasks} setTasks={setTasks} />

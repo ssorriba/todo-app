@@ -55,7 +55,7 @@ const AddTask = ({ tasks, setTasks }) => {
         <input
           type="submit"
           value="Add Task"
-          className="bg-dark-tangerine font-medium cursor-pointer rounded-md p-1 m-3 mt-0 md:pl-4 md:pr-4 md:m-5 md:basis-1/6"
+          className="active:scale-90 hover:bg-dark-tangerine-hover bg-dark-tangerine font-medium cursor-pointer rounded-md p-1 m-3 mt-0 md:pl-4 md:pr-4 md:m-5 md:basis-1/6"
         ></input>
       </form>
     </>
